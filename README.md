@@ -1,4 +1,4 @@
-# TeamCity Log Parcer
+# TeamCity Log Parser
 
 ## Purpose
 
