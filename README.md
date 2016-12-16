@@ -1,4 +1,8 @@
-# Boilerplate for Node-based console tool or lib
+# TeamCity Log Parcer
+
+## Purpose
+
+We need a tool to parce teamcity logs and put it in in-memory tree data structure. So we can visualize it as a _flame graph_ using for instance https://github.com/spiermar/d3-flame-graph
 
 ## Deps
 
