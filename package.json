@@ -5,8 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "NODE_PATH=./lib node index.js",
-    "dev": "NODE_PATH=./lib nodemon index.js --ext js --ignore data/",
+    "start": "cross-env NODE_PATH=./lib node index.js",
+    "dev": "cross-env NODE_PATH=./lib nodemon index.js --ext js --ignore data/",
     "eslint": "eslint lib/ --ext .js || true",
     "eslint:fix": "eslint lib/ --ext .js --fix || true",
     "reinstall": "rimraf node_modules && npm i"
@@ -36,6 +36,7 @@
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "cheerio": "^0.22.0",
+    "cross-env": "^3.1.3",
     "rimraf": "^2.5.2"
   }
 }
