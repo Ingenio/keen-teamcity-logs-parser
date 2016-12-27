@@ -15,39 +15,44 @@
     <script type="text/javascript" src="http://spiermar.github.io/d3-flame-graph/d3.flameGraph.js"></script>
 
     <script type="text/javascript">
-    var flameGraph = d3.flameGraph()
-      .height(480)
-      .width(960)
-      .cellHeight(18)
-      .transitionDuration(750)
-      .transitionEase('cubic-in-out')
-      .sort(true)
-      //Example to sort in reverse order
-      //.sort(function(a,b){ return d3.descending(a.name, b.name);})
-      .title("");
+      var padding = 16; //px
+      var width = window.innerWidth - padding
+      var height = window.innerHeight - padding
 
-    // Example on how to use custom tooltips using d3-tip.
-    var tip = d3.tip()
-      .direction("s")
-      .offset([8, 0])
-      .attr('class', 'd3-flame-graph-tip')
-      .html(function(d) { return "name: " + d.name + ", value: " + d.value; });
 
-    flameGraph.tooltip(tip);
+      var flameGraph = d3.flameGraph()
+        .height(height / 2)
+        .width(width)
+        .cellHeight(18)
+        .transitionDuration(750)
+        .transitionEase('cubic-in-out')
+        .sort(true)
+        //Example to sort in reverse order
+        //.sort(function(a,b){ return d3.descending(a.name, b.name);})
+        .title("");
 
-    // Example on how to use custom labels
-    // var label = function(d) {
-    //  return "name: " + d.name + ", value: " + d.value;
-    // }
+      // Example on how to use custom tooltips using d3-tip.
+      var tip = d3.tip()
+        .direction("s")
+        .offset([8, 0])
+        .attr('class', 'd3-flame-graph-tip')
+        .html(function(d) { return "name: " + d.name + ", value: " + d.value; });
 
-    // flameGraph.label(label);
+      flameGraph.tooltip(tip);
 
-    d3.json("data/log.json", function(error, data) {
-      if (error) return console.warn(error);
-      d3.select("#chart")
-          .datum(data)
-          .call(flameGraph);
-    });
+      // Example on how to use custom labels
+      // var label = function(d) {
+      //  return "name: " + d.name + ", value: " + d.value;
+      // }
+
+      // flameGraph.label(label);
+
+      d3.json("data/log.json", function(error, data) {
+        if (error) return console.warn(error);
+        d3.select("#chart")
+            .datum(data)
+            .call(flameGraph);
+      });
     </script>
   </body>
 </html>
