@@ -42,7 +42,7 @@
     };
     profile = data;//convert(data.profile, allStates);
     tooltip = function(d) {
-      return d.name + " <br /><br /> " + d.value + " samples<br /> " + (((d.value / profile.value) * 100).toFixed(2)) + "% of total";
+      return d.name + " <br /><br /> " + d.value + " seconds<br /> " + (((d.value / profile.value) * 100).toFixed(2)) + "% of total";
     };
     flameGraph = d3.flameGraph('#d3-flame-graph', data, true).size([1200, 600]).cellHeight(20).zoomEnabled(true).zoomAction(function(node, event) {
       return console.log(node, event);
