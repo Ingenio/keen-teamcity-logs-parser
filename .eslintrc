@@ -23,7 +23,7 @@
     "comma-style": [2, "last"],
     "computed-property-spacing": 2,
     "consistent-this": [2, "self"],
-    "curly": 0,
+    "curly": [2, "all"],
     "eol-last": 2,
     "eqeqeq": [2, "allow-null"],
     "guard-for-in": 0,
@@ -87,7 +87,7 @@
     "no-warning-comments": [1, {
         "terms": ["todo bc", "todo restuta bc"]
       }],
-    "object-curly-spacing": 0,
+    "object-curly-spacing": [2, "never"],
     "operator-linebreak": [0, "before"],
     "max-len":[2, 140, 4, {"ignoreComments": true, "ignoreUrls": true}],
     "quote-props": [2, "as-needed", {"keywords": true, "unnecessary": false}],
