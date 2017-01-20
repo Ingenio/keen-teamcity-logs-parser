@@ -7,6 +7,7 @@
   "scripts": {
     "start": "cross-env NODE_PATH=./lib node index.js",
     "dev": "cross-env NODE_PATH=./lib nodemon index.js --ext js --ignore data/",
+    "web": "browser-sync start --server \".\" --port 7778 --files \"./**/*.*\"",
     "eslint": "eslint lib/ --ext .js || true",
     "eslint:fix": "eslint lib/ --ext .js --fix || true",
     "reinstall": "rimraf node_modules && npm i"
