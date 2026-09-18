@@ -1,0 +1,16 @@
+# Syntax notes — CODEOWNERS is gitignore-LIKE, with real differences:
+#   * The LAST matching pattern wins; owners do NOT accumulate. Never append a
+#     catch-all (`* @team`) to the bottom of this file — it would silently strip
+#     ownership from every rule above it. A default owner belongs at the TOP.
+#   * Brace expansion {a,b}, negation (!) and ranges [a-z] are NOT supported.
+#     Do not copy patterns from the org rulesets, which use braces — they would
+#     parse as invalid and match nothing.
+#   * Matching is case-sensitive.
+#   * A team must have write access to this repo or its entries are silently
+#     ignored. Verify:
+#       gh api repos/Ingenio/{repoName}/codeowners/errors
+
+/.github/CODEOWNERS     @Ingenio/ingenio-devops-engineers
+/.cicd/                 @Ingenio/ingenio-devops-engineers
+Dockerfile*             @Ingenio/ingenio-devops-engineers
+dockerfile*             @Ingenio/ingenio-devops-engineers
