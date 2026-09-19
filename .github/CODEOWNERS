@@ -14,3 +14,5 @@
 /.cicd/                 @Ingenio/ingenio-devops-engineers
 Dockerfile*             @Ingenio/ingenio-devops-engineers
 dockerfile*             @Ingenio/ingenio-devops-engineers
+DockerFile*             @Ingenio/ingenio-devops-engineers
+DOCKERFILE*             @Ingenio/ingenio-devops-engineers
