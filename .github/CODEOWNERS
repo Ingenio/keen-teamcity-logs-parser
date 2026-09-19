@@ -11,6 +11,8 @@
 #       gh api repos/Ingenio/{repoName}/codeowners/errors
 
 /.github/CODEOWNERS     @Ingenio/ingenio-devops-engineers
+/.github/dependabot.yml @Ingenio/ingenio-devops-engineers
+/.github/workflows/     @Ingenio/ingenio-devops-engineers
 /.cicd/                 @Ingenio/ingenio-devops-engineers
 Dockerfile*             @Ingenio/ingenio-devops-engineers
 dockerfile*             @Ingenio/ingenio-devops-engineers
